@@ -33,6 +33,7 @@
 			button.onclick = function() {
 				if (capturing) {
 					camera.pause();
+					// capture();
 					button.innerText = 'start';
 				} else {
 					camera.start();
@@ -53,3 +54,4 @@
 		}
 	});
 })();
+
