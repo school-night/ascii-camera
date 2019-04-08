@@ -1,1 +1,3 @@
-make a low-tech typo-selfie! modified from [ASCII Camera](https://andrei.codes/ascii-camera/) with help from [@alitorbati](https://github.com/alitorbati)
+make a low-tech typo-selfie!
+
+modified from [ASCII Camera](https://andrei.codes/ascii-camera/) with help from [@alitorbati](https://github.com/alitorbati)
