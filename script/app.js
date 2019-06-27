@@ -20,8 +20,8 @@ function populateDownloadLink ({ downloadEl, asciiEl }) {
 	const downloadEl = document.getElementById('download')
 
 	camera.init({
-		width: 86,
-		height: 64,
+		width: 84,
+		height: 62,
 		fps: 30,
 		mirror: true,
 
