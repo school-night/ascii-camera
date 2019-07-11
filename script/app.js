@@ -6,18 +6,19 @@
  * Released under the MIT license
  */
 
-function populateDownloadLink ({ downloadEl, asciiEl }) {
-	const file = new Blob([asciiEl.innerHTML], {type: 'text/plain'}) // frame data
+function populateDownloadLink ({ downloadEl, asciiContainer }) {
+	const ascii = asciiContainer.innerHTML
+	const modifiedAscii = ascii // kill this line
+	// const modifiedAscii = ascii + "\nur in zeke's world now" // custom message (\n is new line)
+	const file = new Blob([modifiedAscii], {type: 'text/plain'}) // frame data
 	downloadEl.href = URL.createObjectURL(file) // inject frame into download link
 	downloadEl.download = 'ascii.txt' // set file name
 }
 
 (function() {
-	var asciiContainer = document.getElementById("ascii");
-	var capturing = false;
-
-	const asciiEl = document.getElementById('ascii')
+	const asciiContainer = document.getElementById("ascii");
 	const downloadEl = document.getElementById('download')
+	let capturing = false;
 
 	camera.init({
 		width: 84,
@@ -32,7 +33,7 @@ function populateDownloadLink ({ downloadEl, asciiEl }) {
 					asciiContainer.innerHTML = asciiString;
 				}
 			});
-			populateDownloadLink({ downloadEl, asciiEl })
+			populateDownloadLink({ downloadEl, asciiContainer })
 		},
 
 		onSuccess: function() {
