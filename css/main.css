@@ -1,46 +1,85 @@
+@font-face {
+  font-family: "Graphik";
+  src: url("/fonts/Graphik-Regular-Cy-Gr-Web.woff") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Graphik";
+  src: url("/fonts/Graphik-RegularItalic-Web.woff") format("woff2");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Graphik";
+  src: url("/fonts/Graphik-Semibold-Web.woff") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+}
+
 body {
-	padding: 50px;
-	background: white;
-	color: black;
+  padding: 50px;
+  background: black;
+  color: white;
 }
 
 h1 {
-	font-family: 'Courier New', 'Courier', monospace;
-	font-size: 24px;
-	font-weight: 300;
-	color: #999;
-	text-align: center;
+  font-family: "Graphik", monospace;
+  font-size: 24px;
+  font-weight: bold;
+  /* color: #999; */
+  text-align: center;
 }
 
 #notSupported {
-	display: none;
+  display: none;
 }
 
 #notSupported h1 {
-	color: red;
-	margin-bottom: 20px;
+  color: red;
+  margin-bottom: 20px;
 }
 
 #notSupported img {
-	display: block;
-	margin: 0 auto;
+  display: block;
+  margin: 0 auto;
 }
 
 #ascii {
-	font-family: 'Courier New', 'Courier', monospace;
-	font-size: 18px;
-	line-height: 18px;
-	letter-spacing: -1.5px;
-	text-align: center;
+  font-family: monospace;
+  font-size: 18px;
+  line-height: 18px;
+  letter-spacing: -1.5px;
+  text-align: center;
+  background-color: white;
+  color: black;
+  /* padding-bottom: 18px;
+  padding-top: 18px; */
 }
 
-#button {
-	display: none;
-	margin: 20px auto;
-	padding: 10px 20px;
-	font-family: 'Courier New', 'Courier', monospace;
-	font-size: 36px;
-	background-color: red;
-	color: white;
-	border: none;
-} 
+button {
+  display: none;
+  margin: 20px auto;
+  padding: 10px 20px;
+  font-family: "Graphik", monospace;
+  font-size: 24px;
+  font-weight: bold;
+  /* background-color: red; */
+  background-color: #62d452;
+  color: white;
+  border: none;
+  border-radius: 0;
+  border-bottom: 4px solid #50af43;
+}
+
+button:hover,
+button:focus,
+button:active {
+  color: white;
+  background-color: #50af43;
+  border-bottom: 4px solid #62d452;
+  outline: none !important;
+  box-shadow: none !important;
+}
