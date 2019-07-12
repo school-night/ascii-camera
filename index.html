@@ -7,14 +7,16 @@
 	<meta name="mobile-web-app-capable" content="yes">
 </head>
 <body>
+	<div class="centerparent">
+		<pre id="ascii"></pre>
+	</div>
+	<button id="button">Start the camera</button>
+
 	<h1 id="info">Please allow this page to access your camera.</h1>
 
 	<div id="notSupported">
 		<h1>Your browser does not support the Camera API.</h1>
 	</div>
-
-	<pre id="ascii"></pre>
-	<button id="button">Start the camera</button>
 
 	<!-- the download link is hidden, but a click is simulated in javascript -->
 	<a id='download' href='' style='display: none'>download frame</a>
