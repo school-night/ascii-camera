@@ -55,8 +55,10 @@ h1 {
   text-align: center;
   background-color: white;
   color: black;
-  /* padding-bottom: 18px;
-  padding-top: 18px; */
+  border-left: 12px dotted;
+  border-right: 12px dotted;
+  padding-bottom: 12px;
+  padding-top: 12px;
 }
 
 button {
