@@ -25,6 +25,13 @@ body {
   color: white;
 }
 
+.description {
+  font-family: "Graphik", monospace;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+}
+
 h1 {
   font-family: "Graphik", monospace;
   font-size: 24px;
@@ -75,6 +82,7 @@ h1 {
 }
 
 button {
+  --primary: #00ff5c;
   display: none;
   margin: 20px auto;
   padding: 10px 20px;
@@ -82,19 +90,20 @@ button {
   font-size: 24px;
   font-weight: bold;
   /* background-color: red; */
-  background-color: #62d452;
+  background-color: #00ff5c;
   color: white;
   border: none;
   border-radius: 0;
-  border-bottom: 4px solid #50af43;
 }
 
 button:hover,
 button:focus,
 button:active {
+  --primary: #00ff5c;
   color: white;
-  background-color: #50af43;
-  border-bottom: 4px solid #62d452;
+  color: $white;
+  background-color: darken(#00ff5c, 7.5) !important;
+  border-bottom: darken(#00ff5c, 7.5) !important;
   outline: none !important;
   box-shadow: none !important;
 }
