@@ -62,8 +62,8 @@ h1 {
 #ascii {
   display: inline-block;
   font-family: monospace;
-  font-size: 18px;
-  line-height: 18px;
+  font-size: 14px;
+  line-height: 14px;
   letter-spacing: -1.5px;
   text-align: center;
   background-color: white;
