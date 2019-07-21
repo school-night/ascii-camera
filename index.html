@@ -7,25 +7,28 @@
 	<meta name="mobile-web-app-capable" content="yes">
 </head>
 <body>
-	<p class="description">Let’s take a low-tech typo-selfie!</p>
-	<div class="centerparent">
-		<div class="centerborder">
-			<pre id="ascii"></pre>
+	<div>
+		<p class="description">Let’s take a low-tech typo-selfie!</p>
+		<div class="centerparent">
+			<div class="centerborder">
+				<pre id="ascii"></pre>
+			</div>
 		</div>
-	</div>
-	<button id="button">Start the camera</button>
+		<p class="description">Press SPACE to take a pic!</p>
+		<button id="button">Start the camera</button>
 
-	<h1 id="info">Please allow this page to access your camera.</h1>
+		<h1 id="info">Please allow this page to access your camera.</h1>
 
-	<div id="notSupported">
-		<h1>Your browser does not support the Camera API.</h1>
-	</div>
+		<div id="notSupported">
+			<h1>Your browser does not support the Camera API.</h1>
+		</div>
 
-	<!-- the download link is hidden, but a click is simulated in javascript -->
-	<a id='download' href='' style='display: none'>download frame</a>
+		<!-- the download link is hidden, but a click is simulated in javascript -->
+		<a id='download' href='' style='display: none'>download frame</a>
 
-	<script src="script/camera.js"></script>
-	<script src="script/ascii.js"></script>
-	<script src="script/app.js"></script>
-</body>
+		<script src="script/camera.js"></script>
+		<script src="script/ascii.js"></script>
+		<script src="script/app.js"></script>
+		</div>
+	</body>
 </html>

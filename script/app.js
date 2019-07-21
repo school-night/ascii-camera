@@ -52,9 +52,7 @@ function populateDownloadLink({ downloadEl, asciiContainer }) {
     onSuccess: function() {
       document.getElementById("info").style.display = "none";
 
-      const button = document.getElementById("button");
-      button.style.display = "block";
-      button.onclick = function() {
+      const cameraControl = () => {
         if (capturing) {
           camera.pause();
           downloadEl.click();
@@ -64,7 +62,20 @@ function populateDownloadLink({ downloadEl, asciiContainer }) {
           button.innerText = "Take a picture";
         }
         capturing = !capturing;
-      };
+        button.blur()
+      }
+
+      const button = document.getElementById("button");
+      button.style.display = "block";
+      button.onclick = cameraControl
+
+      // only on space
+      document.addEventListener('keydown', (e) => {
+        if (e.code === 'Space') cameraControl()
+      });
+
+      // any key
+      // document.addEventListener('keydown', cameraControl)
     },
 
     onError: function(error) {
