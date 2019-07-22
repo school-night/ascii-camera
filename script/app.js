@@ -62,6 +62,7 @@ function populateDownloadLink({ downloadEl, asciiContainer }) {
           camera.start()
           button.innerText = "Take a picture"
         } else {
+          downloadEl.click()
           setTimeout(camera.start, cameraDelay)
         }
 
