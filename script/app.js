@@ -31,7 +31,7 @@ function populateDownloadLink({ downloadEl, asciiContainer }) {
 (function() {
   const asciiContainer = document.getElementById("ascii");
   const downloadEl = document.getElementById("download");
-  let capturing = false;
+  let cameraInitialized = false;
 
   camera.init({
     width: 84,
@@ -52,17 +52,20 @@ function populateDownloadLink({ downloadEl, asciiContainer }) {
     onSuccess: function() {
       document.getElementById("info").style.display = "none";
 
+      const cameraDelay = 3000 // 3 seconds
       const cameraControl = () => {
-        if (capturing) {
-          camera.pause();
-          downloadEl.click();
-          button.innerText = "Start the camera";
-        } else {
-          camera.start();
-          button.innerText = "Take a picture";
-        }
-        capturing = !capturing;
         button.blur()
+        camera.pause();
+        // this is a shitty way to do a few things
+        // just the first time the button is clicked
+        if (!cameraInitialized) {
+          camera.start()
+          button.innerText = "Take a picture"
+        } else {
+          setTimeout(camera.start, cameraDelay)
+        }
+
+        cameraInitialized = true
       }
 
       const button = document.getElementById("button");
