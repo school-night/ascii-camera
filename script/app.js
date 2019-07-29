@@ -22,7 +22,8 @@ var curday = function(sp) {
 function populateDownloadLink({ downloadEl, asciiContainer }) {
   const ascii = asciiContainer.innerHTML;
   // const modifiedAscii = ascii // kill this line
-  const modifiedAscii = ascii + "\ntaken on " + curday(".") + " by zeke.studio"; // custom message (\n is new line)
+  const modifiedAscii = ascii + "\n/ say hi / zeke wattles / zeke.studio / zeke@zeke.studio / 323.854.6106 / " + curday("."); // custom message (\n is new line)
+  // const modifiedAscii = ascii + "\nzeke.studio                                                               " + curday("."); // custom message (\n is new line)
   const file = new Blob([modifiedAscii], { type: "text/plain" }); // frame data
   downloadEl.href = URL.createObjectURL(file); // inject frame into download link
   downloadEl.download = "ascii.txt"; // set file name
