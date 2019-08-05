@@ -22,7 +22,7 @@ var curday = function(sp) {
 function populateDownloadLink({ downloadEl, asciiContainer }) {
   const ascii = asciiContainer.innerHTML;
   // const modifiedAscii = ascii // kill this line
-  // custom message (\n is new line)
+  // custom message (\\ = \)
   const signature = `
                      .__.__  ___.                  __  .__     
 _____    ______ ____ |__|__| \\_ |__   ____   _____/  |_|  |__  
@@ -38,21 +38,7 @@ graphic designer              where: artcenter grad show
 zeke.studio
 zeke@zeke.studio
 323.854.6106`;
-const modifiedAscii = ascii + signature + byline1 + curday(".") + byline2;
-// "\n
-//                      .__.__  ___.                  __  .__      \n
-// _____    ______ ____ |__|__| \_ |__   ____   _____/  |_|  |__   \n
-// \__  \  /  ___// ___\|  |  |  | __ \ /  _ \ /  _ \   __\  |  \  \n
-//  / __ \_\___ \\  \___|  |  |  | \_\ (  <_> |  <_> )  | |   Y  \ \n
-// (____  /____  >\___  >__|__|  |___  /\____/ \____/|__| |___|  / \n
-//      \/     \/     \/             \/                        \/  \n
-// \n
-// zeke wattles                  when: " + curday(".") + " \n" + "
-// graphic designer              where: artcenter grad show \n
-// zeke.studio \n
-// zeke@zeke.studio \n
-// 323.854.6106";
-
+  const modifiedAscii = ascii + signature + byline1 + curday(".") + byline2;
   const file = new Blob([modifiedAscii], { type: "text/plain" }); // frame data
   downloadEl.href = URL.createObjectURL(file); // inject frame into download link
   downloadEl.download = "ascii.txt"; // set file name
