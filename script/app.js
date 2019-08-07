@@ -76,7 +76,7 @@ zeke@zeke.studio
         // just the first time the button is clicked
         if (!cameraInitialized) {
           camera.start()
-          button.innerText = "Take a picture"
+          button.innerText = "take a picture"
         } else {
           downloadEl.click()
           setTimeout(camera.start, cameraDelay)

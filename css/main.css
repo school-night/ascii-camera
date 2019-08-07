@@ -1,4 +1,4 @@
-@font-face {
+/* @font-face {
   font-family: "Graphik";
   src: url("/fonts/Graphik-Regular-Cy-Gr-Web.woff") format("woff2");
   font-weight: normal;
@@ -17,7 +17,7 @@
   src: url("/fonts/Graphik-Semibold-Web.woff") format("woff2");
   font-weight: bold;
   font-style: normal;
-}
+} */
 
 html {
   --primary: #00ff55;
@@ -35,14 +35,16 @@ body {
 }
 
 .description {
-  font-family: "Graphik", monospace;
-  font-size: 16px;
+  /* font-family: "Graphik", monospace; */
+  font-family: monospace;
+  font-size: 24px;
   color: white;
   text-align: center;
 }
 
 h1 {
-  font-family: "Graphik", monospace;
+  /* font-family: "Graphik", monospace; */
+  font-family: monospace;
   font-size: 24px;
   font-weight: bold;
   /* color: #999; */
@@ -94,12 +96,13 @@ button {
   display: none;
   margin: 20px auto;
   padding: 10px 20px;
-  font-family: "Graphik", monospace;
+  /* font-family: "Graphik", monospace; */
+  font-family: monospace;
   font-size: 24px;
   font-weight: bold;
   /* background-color: red; */
   background-color: var(--primary);
-  color: white;
+  color: black;
   border: none;
   border-radius: 0;
 }
