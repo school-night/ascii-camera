@@ -28,7 +28,7 @@ const signature1 = `
   __| _/_ _\\_ |__ |  | _____ \\_ |__         DUBLAB’S 20TH ANNIVERSARY
  / __ |  |  \\ __ \\|  | \\__  \\ | __ \\        `;
 
-// change the location here
+// CHANGE LOCATION TEXT HERE
 const signature2 = ` BEDROCK L.A.
 / /_/ |  |  / \\_\\ \\  |__/ __ \\| \\_\\ \\       ASCII BOOTH BY ZEKE & ALI
 \\____ |____/|___  /____(____  /___  /       TAGGING US IS COOL
