@@ -21,24 +21,22 @@ var curday = function(sp) {
 
 function populateDownloadLink({ downloadEl, asciiContainer }) {
   const ascii = asciiContainer.innerHTML;
-  // const modifiedAscii = ascii // kill this line
-  // custom message (\\ = \)
-  const signature = `
-                     .__.__  ___.                  __  .__
-_____    ______ ____ |__|__| \\_ |__   ____   _____/  |_|  |__
-\\__  \\  /  ___// ___\\|  |  |  | __ \\ /  _ \\ /  _ \\   __\\  |  \\
- / __ \\_\\___ \\\\  \\___|  |  |  | \\_\\ (  <_> |  <_> )  | |   Y  \\
-(____  /____  >\\___  >__|__|  |___  /\\____/ \\____/|__| |___|  /
-     \\/     \\/     \\/             \\/                        \\/
 
-`;
-  const byline1 = `zeke wattles                  when: `;
-  const byline2 = `
-graphic designer              where: artcenter grad show
-zeke.studio
-zeke@zeke.studio
-323.854.6106`;
-  const modifiedAscii = ascii + signature + byline1 + curday(".") + byline2;
+const signature1 = `
+
+    .___   ___.   .__        ___.           
+  __| _/_ _\\_ |__ |  | _____ \\_ |__         DUBLAB’S 20TH ANNIVERSARY
+ / __ |  |  \\ __ \\|  | \\__  \\ | __ \\        `;
+
+// change the location here
+const signature2 = ` BEDROCK L.A.
+/ /_/ |  |  / \\_\\ \\  |__/ __ \\| \\_\\ \\       ASCII BOOTH BY ZEKE & ALI
+\\____ |____/|___  /____(____  /___  /       TAGGING US IS COOL
+     \\/         \\/          \\/    \\/        @DUBLAB @ZEKE.STUDIO @ALITORBATI`;
+
+  // add footer text to ascii
+  // const modifiedAscii = ascii + signature + byline1 + curday(".") + " " + location + byline2;
+  const modifiedAscii = ascii + signature1 + curday(".") + signature2;
   const file = new Blob([modifiedAscii], { type: "text/plain" }); // frame data
   downloadEl.href = URL.createObjectURL(file); // inject frame into download link
   downloadEl.download = "ascii.txt"; // set file name
