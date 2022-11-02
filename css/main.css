@@ -54,16 +54,7 @@ h1 {
   padding-right: 12px;
 }
 
-button {
+#button {
   visibility: hidden;
   display: none;
-  /* margin: 20px auto;
-  padding: 10px 20px;
-  font-family: monospace;
-  font-size: 24px;
-  font-weight: normal;
-  background-color: var(--primary);
-  color: black;
-  border: none;
-  border-radius: 0; */
 }
