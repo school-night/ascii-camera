@@ -1,37 +1,42 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
+  <head>
+    <title>ASCII BOOTH</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/main.css" />
+    <meta name="mobile-web-app-capable" content="yes" />
+  </head>
 
-<head>
-	<title>ASCII BOOTH</title>
-	<meta charset="utf-8" />
-	<link rel="stylesheet" href="css/main.css" />
-	<meta name="mobile-web-app-capable" content="yes">
-</head>
+  <body>
+    <div>
+      <div class="centerparent">
+        <div class="centerborder">
+          <pre id="ascii"></pre>
+        </div>
+      </div>
 
-<body>
-	<div>
+      <button id="button">start</button>
 
-		<div class="centerparent">
-			<div class="centerborder">
-				<pre id="ascii"></pre>
-			</div>
-		</div>
+      <h1 id="info">
+        <br />
+        <br />
+        1. allow camera
+        <br />
+        2. press spacebar once to start program
+        <br />
+        3. press spacebar again to take a picture
+      </h1>
 
-		<button id="button">start</button>
+      <div id="notSupported">
+        <h1>your browser does not support the camera API</h1>
+      </div>
 
-		<h1 id="info">1. allow camera<br>2. press spacebar once to start<br>3. press spacebar again to take a picture</h1>
+      <!-- the download link is hidden, but a click is simulated in javascript -->
+      <a id="download" href="" style="display: none">download frame</a>
 
-		<div id="notSupported">
-			<h1>your browser does not support the camera API</h1>
-		</div>
-
-		<!-- the download link is hidden, but a click is simulated in javascript -->
-		<a id='download' href='' style='display: none'>download frame</a>
-
-		<script src="script/camera.js"></script>
-		<script src="script/ascii.js"></script>
-		<script src="script/app.js"></script>
-	</div>
-</body>
-
+      <script src="script/camera.js"></script>
+      <script src="script/ascii.js"></script>
+      <script src="script/app.js"></script>
+    </div>
+  </body>
 </html>
